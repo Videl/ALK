@@ -1,0 +1,102 @@
+{% extends "::base.html.twig" %}
+  {% block master_title %} >> {% block title %}{% endblock %} {% endblock %}
+
+  {% block entete_navbar %}
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#"><img src="{{ asset('logo_nocorner_downsized_and_transparent.gif') }}" alt="ALK" />
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#about" class="btn">Les enseignants</a></li>
+              <li><a href="#about" class="btn">Lieux</a></li>
+              <li><a href="#about" class="btn disabled">Notre filiation</a></li>
+              <li><a href="#about" class="btn">Contacts</a></li>
+              <li><a href="#about" class="btn disabled">Documents</a></li>
+              <li class="dropdown"><a href="#stages" class="dropdown-toggle btn" data-toggle="dropdown">Stages <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Stage A</a></li>
+                    <li><a href="#">Stage B</a></li>
+                    <li><a href="#">Stage C</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Stages d'initiation A</a></li>
+                    <li><a href="#">Stages d'initiation B</a></li>
+                </ul>
+              </li>
+              <li class="search-form-for-the-navbar-perso"><form class="pull-right form-search"><input type="text" class="input-medium search-query pull-right " placeholder="Recherche"/></form></li>
+            </ul>
+          </div>
+        </div> <!-- container-fluid -->
+      </div> <!-- navbar-inner -->
+    </div> <!-- navbar -->
+    {% endblock %}
+
+
+
+      {% block big_body %}
+      <div class="container well">
+        <div class="row-fluid">
+          <div class="span8">
+          {% block body %}
+            {% block second_floating_headers %}
+            {% endblock %}
+
+            {% block little_body %}
+            {% endblock %}
+          {% endblock %}
+          </div>
+
+          {% block menu %}
+          <div class="span4">
+            <div class="inner-well sidebar-nav">
+              <ul class="nav nav-list">
+                <li class="nav-header">Sidebar</li>
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="nav-header">Sidebar</li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="nav-header">Sidebar</li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li>
+                  <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="icon-user"></i> Username
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Profile</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Sign Out</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div> <!-- /span4 -->
+          {% endblock %}
+        </div><!-- /row-fluid -->
+      </div><!--</container welm>-->
+      {% endblock %}
+
+            {% block footer %}
+            <p><!--[if lte IE 8]><span style="filter: FlipH; -ms-filter: "FlipH"; display: inline-block;"><![endif]-->
+    <span style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); display: inline-block;">
+        &copy;
+    </span>
+    <!--[if lte IE 8]></span><![endif]--> Above and beyond 2012</p>
+    {% endblock %}

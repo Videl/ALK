@@ -1,0 +1,13 @@
+ALKSiteBundle_homepage:
+    pattern:  /
+    defaults: { _controller: ALKSiteBundle:Default:index }
+
+
+ALKSiteBundle_hello:
+    pattern:  /hello/{name}
+    defaults: { _controller: ALKSiteBundle:Default:hello }
+
+
+ALKSiteBundle_hello:
+    pattern:  /node
+    defaults: { _controller: ALKSiteBundle:Default:article }

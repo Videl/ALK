@@ -1,0 +1,7 @@
+parameters:
+#    alk_site.example.class: ALK\Bundle\SiteBundle\Example
+
+services:
+#    alk_site.example:
+#        class: %alk_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
