@@ -2,7 +2,6 @@
 
 namespace ALK\Bundle\SiteBundle\Entity;
 
-
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,13 +35,6 @@ class Article
      */
     private $contenu;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="ALK\Bundle\SiteBundle\Entity\Tag")
-     * @ORM\JoinColumn(nullable=false)
-     */
-
-    private $tags;
-
 
 
 
@@ -56,7 +48,6 @@ class Article
     public function __construct()
     {
         $this->date = new \Datetime();
-        $this->tags = new ArrayCollection();
     }
 
 
@@ -143,21 +134,10 @@ class Article
     }
 
     /**
-     * @return ALK\Bundle\SiteBundle\Entity\Image
+     * @return
      */
     public function getImage()
     {
         return $this->image;
     }
-
-    public function setTags(\ALK\Bundle\SiteBunde\Entity\Tag $tags = null)
-    {
-        $this->tags[] = $tags;
-    }
-
-    public function getTags()
-    {
-        return $this->tags;
-    }
-
 }

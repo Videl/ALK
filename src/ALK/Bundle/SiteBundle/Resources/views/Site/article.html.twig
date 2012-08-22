@@ -6,7 +6,7 @@
 {% block little_body %}
 <img src="{{ article.image.url }}" alt="{{ article.image.alt }}" class="pull-right" />
 
-<h2>{{ article.titre }} <small>{{ article.date|date('d/m/Y') }}</small></h2>
+<h2>{{ article.titre }} <small>{{ article.date|date('d/m/Y') }} ; {% for tag in article.tags %} <a href="#" >{{ tag.name }}</a> {% endfor %}</small></h2>
 <p>{{ article.contenu }}</p>
 
 {% endblock %}

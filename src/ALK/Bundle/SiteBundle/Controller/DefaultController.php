@@ -5,6 +5,7 @@ namespace ALK\Bundle\SiteBundle\Controller;
 
 use ALK\Bundle\SiteBundle\Entity\Article;
 use ALK\Bundle\SiteBundle\Entity\Image;
+use ALK\Bundle\SiteBundle\Entity\Tag;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
