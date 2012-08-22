@@ -8,6 +8,11 @@ ALKSiteBundle_hello:
     defaults: { _controller: ALKSiteBundle:Default:hello }
 
 
-ALKSiteBundle_hello:
-    pattern:  /node
+ALKSiteBundle_voirarticle:
+    pattern:  /node/{id}
     defaults: { _controller: ALKSiteBundle:Default:article }
+
+
+ALKSiteBundle_ajouterarticle:
+    pattern:  /add/node/
+    defaults: { _controller: ALKSiteBundle:Default:ajouter }

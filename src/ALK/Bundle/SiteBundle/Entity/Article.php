@@ -127,4 +127,17 @@ class Article
      * @ORM\JoinColumn(nullable=false)
      */
     private $image;
+
+    public function setImage(\ALK\Bundle\SiteBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return \ALK\Bundle\SiteBundle\Entity\Image
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
 }

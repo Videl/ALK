@@ -28,11 +28,18 @@ class Image
      */
     private $url;
 
+    /**
+     * @var string $alt
+     *
+     * @ORM\Column(name="alt", type="string", length=255)
+     */
+    private $alt;
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -52,10 +59,31 @@ class Image
     /**
      * Get url
      *
-     * @return string 
+     * @return string
      */
     public function getUrl()
     {
         return $this->url;
     }
+
+    /**
+     * Set alt
+     *
+     * @param string $alt
+     */
+    public function setAlt($alt)
+    {
+        $this->alt = $alt;
+    }
+
+    /**
+     * Get alt
+     *
+     * @return string
+     */
+    public function getAlt()
+    {
+        return $this->alt;
+    }
+
 }

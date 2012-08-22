@@ -1,9 +1,12 @@
 {% extends "ALKSiteBundle::layout.html.twig" %}
 
-{% block title %}Article {{ article.id }}{% endblock %}
+{% block title %}Article {{ article.titre }}{% endblock %}
 
 
 {% block little_body %}
+<img src="{{ article.image.url }}" alt="{{ article.image.alt }}" class="pull-right" />
+
 <h2>{{ article.titre }} <small>{{ article.date|date('d/m/Y') }}</small></h2>
 <p>{{ article.contenu }}</p>
+
 {% endblock %}
