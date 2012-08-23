@@ -1,18 +1,19 @@
 {% extends "ALKSiteBundle::layout.html.twig" %}
 {% block little_body %}
 
-<form action="{{ path('ALKSiteBundle_ajouterarticle') }}" method="post" {{ form_enctype(form) }}>
+<form action="" method="post" {{ form_enctype(form) }}>
 
 
 
-<p class="pull-right">{{ form_row(form.image) }}</p>
+<div class="pull-right">{{ form_row(form.image) }}</div>
 
 <h2>
     {{ form_label(form.titre, "Titre de l'article") }}
     {{ form_errors(form.titre) }}
     {{ form_widget(form.titre) }}
-    <small>{{ form_row(form.date) }}<br />
-        <small><a href="#" ><i class="icon-tag"></i> tags</a></small>
+    <small>{{ form_row(form.date) }}
+        <small><a href="#" ><i class="icon-tag"></i>tags : </a> {{ form_row(form.tags) }}
+<a href="#" id="add_tag">Ajouter un tag</a> </small>
     </small>
 </h2>
 {{ form_errors(form) }}
@@ -25,6 +26,38 @@
 
 <!-- Les erreurs générales du formulaire. -->
 
+<input type="submit" value="submit"/>
+</form>
 
+{% endblock %}
 
+{% block javascript %}
+<script type="text/javascript">
+$(document).ready(function() {
+    // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+    var $container = $('#alk_sitebundle_articletype_tags');
+
+    // On définit une fonction qui va ajouter un champ.
+    function add_tag() {
+        // On définit le numéro du champ (en comptant le nombre de champs déjà ajoutés).
+        index = $container.children().length;
+
+        // On ajoute à la fin de la balise <div> le contenu de l'attribut « data-prototype »,
+        // après avoir remplacé la variable $$name$$ qu'il contient par le numéro du champ.
+        $container.append(
+            $($container.attr('data-prototype').replace(/\$\$name\$\$/g, index))
+        );
+    }
+
+    // On ajoute un premier champ directement s'il n'en existe pas déjà un.
+    if($container.children().length == 0) {
+        add_tag();
+    }
+
+    // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+    $('#add_tag').click(function() {
+        add_tag();
+    });
+});
+</script>
 {% endblock %}
