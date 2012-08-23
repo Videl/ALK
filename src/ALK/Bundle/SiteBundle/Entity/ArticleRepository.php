@@ -2,6 +2,8 @@
 
 namespace ALK\Bundle\SiteBundle\Entity;
 
+use ALK\Bundle\SiteBundle\Entity\Tag;
+
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -13,7 +15,7 @@ use Doctrine\ORM\EntityRepository;
 class ArticleRepository extends EntityRepository
 {
 
-    /*public function getAvecTags(array $nom_tags)
+    public function getAvecTags(array $nom_tags)
     {
         $repository = $this->getDoctrine()
                    ->getEntityManager()
@@ -23,9 +25,10 @@ class ArticleRepository extends EntityRepository
             $articles[] = $repository->findByName($tag);
         }
 
-        return $articles;*/
+        return $articles;
+    }
 
-    public function getAvecTags(array $nom_tags)
+    /*public function getAvecTags(array $nom_tags)
     {
         $qb = $this->createQueryBuilder('a');
 
@@ -36,6 +39,6 @@ class ArticleRepository extends EntityRepository
         // Enfin, on retourne le résultat.
         return $qb->getQuery()
                    ->getResult();
-    }
+    }*/
 
 }

@@ -1,8 +1,30 @@
-{# src/Sdz/BlogBundle/Resources/views/Blog/formulaire.html.twig #}
+{% extends "ALKSiteBundle::layout.html.twig" %}
+{% block little_body %}
 
-<form method="post" {{ form_enctype(form) }}>
+<form action="{{ path('ALKSiteBundle_ajouterarticle') }}" method="post" {{ form_enctype(form) }}>
 
-	{{ form_widget(form) }}
 
-	<input type="submit" />
-</form>
+
+<p class="pull-right">{{ form_row(form.image) }}</p>
+
+<h2>
+    {{ form_label(form.titre, "Titre de l'article") }}
+    {{ form_errors(form.titre) }}
+    {{ form_widget(form.titre) }}
+    <small>{{ form_row(form.date) }}<br />
+        <small><a href="#" ><i class="icon-tag"></i> tags</a></small>
+    </small>
+</h2>
+{{ form_errors(form) }}
+<p>
+     {{ form_label(form.contenu, "Contenu de l'article") }}
+    {{ form_errors(form.contenu) }}
+    {{ form_widget(form.contenu) }}
+</p>
+{{ form_rest(form) }}
+
+<!-- Les erreurs générales du formulaire. -->
+
+
+
+{% endblock %}

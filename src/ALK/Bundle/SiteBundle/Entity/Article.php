@@ -1,6 +1,8 @@
 <?php
 
 namespace ALK\Bundle\SiteBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -40,11 +42,7 @@ class Article
      * @ORM\ManyToMany(targetEntity="ALK\Bundle\SiteBundle\Entity\Tag")
      * @ORM\JoinColumn(nullable=false)
      */
-
     private $tags;
-
-
-
 
     /**
      * @var string $titre
