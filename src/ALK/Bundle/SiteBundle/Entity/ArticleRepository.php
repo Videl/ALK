@@ -14,7 +14,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
-
+/*
     public function getAvecTags(array $nom_tags)
     {
         $repository = $this->getDoctrine()
@@ -26,9 +26,9 @@ class ArticleRepository extends EntityRepository
         }
 
         return $articles;
-    }
+    }*/
 
-    /*public function getAvecTags(array $nom_tags)
+    public function getAvecTags(array $nom_tags)
     {
         $qb = $this->createQueryBuilder('a');
 
@@ -39,6 +39,6 @@ class ArticleRepository extends EntityRepository
         // Enfin, on retourne le résultat.
         return $qb->getQuery()
                    ->getResult();
-    }*/
+    }
 
 }

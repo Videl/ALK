@@ -6,6 +6,7 @@ namespace ALK\Bundle\SiteBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilder;
 use ALK\Bundle\SiteBundle\Form\TagType;
+use ALK\Bundle\SiteBundle\Entity\Tag;
 
 class ArticleType extends AbstractType
 {

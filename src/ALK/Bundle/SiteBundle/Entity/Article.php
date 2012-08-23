@@ -2,6 +2,7 @@
 
 namespace ALK\Bundle\SiteBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
+use ALK\Bundle\SiteBundle\Entity\Tag;
 
 
 
