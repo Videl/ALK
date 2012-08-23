@@ -1,12 +1,11 @@
 <?php
 
 namespace ALK\Bundle\SiteBundle\Entity;
-use Doctrine\Common\Collections\ArrayCollection;
-use ALK\Bundle\SiteBundle\Entity\Tag;
-
-
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * ALK\Bundle\SiteBundle\Entity\Article
