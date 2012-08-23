@@ -1,0 +1,30 @@
+article_crud:
+    pattern:  /
+    defaults: { _controller: "ALKSiteBundle:Article:index" }
+
+article_crud_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ALKSiteBundle:Article:show" }
+
+article_crud_new:
+    pattern:  /new
+    defaults: { _controller: "ALKSiteBundle:Article:new" }
+
+article_crud_create:
+    pattern:  /create
+    defaults: { _controller: "ALKSiteBundle:Article:create" }
+    requirements: { _method: post }
+
+article_crud_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ALKSiteBundle:Article:edit" }
+
+article_crud_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ALKSiteBundle:Article:update" }
+    requirements: { _method: post }
+
+article_crud_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ALKSiteBundle:Article:delete" }
+    requirements: { _method: post }

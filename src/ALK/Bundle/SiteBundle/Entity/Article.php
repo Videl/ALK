@@ -41,7 +41,7 @@ class Article
 
     /**
      * @ORM\ManyToMany(targetEntity="ALK\Bundle\SiteBundle\Entity\Tag")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $tags;
 
@@ -51,6 +51,7 @@ class Article
      * @ORM\Column(name="titre", type="string", length=255)
      */
     private $titre;
+
 
     public function __construct()
     {
@@ -130,24 +131,6 @@ class Article
         return $this->titre;
     }
 
-    /**
-     * @ORM\OneToOne(targetEntity="ALK\Bundle\SiteBundle\Entity\Image")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $image;
-
-    public function setImage(\ALK\Bundle\SiteBundle\Entity\Image $image = null)
-    {
-        $this->image = $image;
-    }
-
-    /**
-     * @return ALK\Bundle\SiteBundle\Entity\Image
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
 
     public function setTags(\ALK\Bundle\SiteBunde\Entity\Tag $tags = null)
     {

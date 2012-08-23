@@ -7,7 +7,6 @@ use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManager;
 use ALK\Bundle\SiteBundle\Entity\Article;
-use ALK\Bundle\SiteBundle\Entity\Tag;
 
 
 class ArticleHandler
@@ -45,10 +44,10 @@ class ArticleHandler
         $this->em->persist($article);
 
         // On persiste tous les tags de l'article.
-        foreach($article->getTags() as $tag)
+        /*foreach($article->getTags() as $tag)
         {
             $this->em->persist($tag);
-        }
+        }*/
 
         $this->em->flush();
     }

@@ -4,7 +4,6 @@
 namespace ALK\Bundle\SiteBundle\Controller;
 
 use ALK\Bundle\SiteBundle\Entity\Article;
-use ALK\Bundle\SiteBundle\Entity\Image;
 use ALK\Bundle\SiteBundle\Entity\Tag;
 use ALK\Bundle\SiteBundle\Form\ArticleType;
 use ALK\Bundle\SiteBundle\Form\ArticleHandler;
@@ -25,7 +24,7 @@ class DefaultController extends Controller
         return $this->render('ALKSiteBundle:Site:hello.html.twig', array('name' => $name));
     }
 
-    public function articleAction($id)
+    public function voirarticleAction($id)
     {
         // On récupère le repository
         $repository = $this->getDoctrine()

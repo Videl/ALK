@@ -1,6 +1,10 @@
 ALKSiteBundle:
     resource: "@ALKSiteBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /site
+
+
+acme_hello:
+    resource: "@ALKSiteBundle/Resources/config/routing/article.yml"
 
 # Internal routing configuration to handle ESI
 #_internal:

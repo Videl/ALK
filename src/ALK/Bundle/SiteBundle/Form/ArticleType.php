@@ -5,8 +5,6 @@ namespace ALK\Bundle\SiteBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilder;
-use ALK\Bundle\SiteBundle\Form\TagType;
-use ALK\Bundle\SiteBundle\Entity\Tag;
 
 class ArticleType extends AbstractType
 {
@@ -16,7 +14,6 @@ class ArticleType extends AbstractType
             ->add('date',    'date')
             ->add('titre',   'text')
             ->add('contenu', 'textarea')
-            ->add('image', 'text')
             ->add('tags',    'collection', array('type'      => new TagType,
                                                  'prototype' => true,
                                                  'allow_add' => true))

@@ -1,11 +1,9 @@
 {% extends "ALKSiteBundle::layout.html.twig" %}
 {% block little_body %}
 
-<form action="" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('ALKSiteBundle_ajouterarticle') }}" method="post" {{ form_enctype(form) }}>
 
 
-
-<div class="pull-right">{{ form_row(form.image) }}</div>
 
 <h2>
     {{ form_label(form.titre, "Titre de l'article") }}

@@ -1,7 +1,11 @@
+<html>
+<head></head>
+<body>
 <h1>Article creation</h1>
 
-<form action="{{ path('article_create') }}" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('article_crud_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
+    <div><label class=" required">0</label><div id="alk_sitebundle_articletype_tags_$$name$$"><div><label for="alk_sitebundle_articletype_tags_0_name" class=" required">Name</label><input type="text" id="alk_sitebundle_articletype_tags_0_name" name="alk_sitebundle_articletype[tags]0][name]" required="required" /></div></div></div>
     <p>
         <button type="submit">Create</button>
     </p>
@@ -9,8 +13,42 @@
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('article') }}">
+        <a href="{{ path('article_crud') }}">
             Back to the list
         </a>
     </li>
+    <li>
+        <a href="#" id="add_tag">Ajouter un tag</a>
+    </li>
 </ul>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+    var $container = $('#alk_sitebundle_articletype_tags');
+
+    // On définit une fonction qui va ajouter un champ.
+    function add_tag() {
+        // On définit le numéro du champ (en comptant le nombre de champs déjà ajoutés).
+        index = $container.children().length;
+
+        // On ajoute à la fin de la balise <div> le contenu de l'attribut « data-prototype »,
+        // après avoir remplacé la variable $$name$$ qu'il contient par le numéro du champ.
+        $container.append(
+            $($container.attr('data-prototype').replace(/\$\$name\$\$/g, index))
+        );
+    }
+
+    // On ajoute un premier champ directement s'il n'en existe pas déjà un.
+    if($container.children().length == 0) {
+        add_tag();
+    }
+
+    // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+    $('#add_tag').click(function() {
+        add_tag();
+    });
+});
+</script>
+</body>
+</html>

@@ -4,7 +4,6 @@
 
 
 {% block little_body %}
-<img src="{{ article.image.url }}" alt="{{ article.image.alt }}" class="pull-right" />
 
 <h2>{{ article.titre }} <small>{{ article.date|date('d/m/Y') }} <br /> <small>{% for tag in article.tags %} <a href="#" ><i class="icon-tag"></i> {{ tag.name }}</a> {% endfor %}</small> </small></h2>
 <p>{{ article.contenu }}</p>
