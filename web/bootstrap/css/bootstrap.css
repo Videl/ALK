@@ -4607,6 +4607,7 @@ a.thumbnail:hover {
   background-color: #999999;
 }
 
+
 .label {
   padding: 1px 4px 2px;
   -webkit-border-radius: 3px;
@@ -5103,4 +5104,14 @@ a.badge:hover {
 
 .invisible {
   visibility: hidden;
+}
+
+.mesarticles {
+    text-align:justify;
+}
+
+.img-circle {
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
 }

@@ -16,3 +16,7 @@ ALKSiteBundle_voirarticle:
 ALKSiteBundle_ajouterarticle:
     pattern:  /add/node/
     defaults: { _controller: ALKSiteBundle:Default:ajouter }
+
+ALKSiteBundle_modifierArticle:
+    pattern:  /edit/node/{id}
+    defaults: { _controller: ALKSiteBundle:Default:modifierArticle }

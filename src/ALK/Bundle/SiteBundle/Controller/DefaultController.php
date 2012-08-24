@@ -58,4 +58,24 @@ class DefaultController extends Controller
 
         return $this->render('ALKSiteBundle:Site:formulaire.html.twig', array('form' => $form->createView()));
     }
+
+    public function modifierArticleAction($id)
+    {
+        // On récupère le repository
+        $em = $this->getDoctrine()->getEntityManager();
+        $repository = $em->getRepository('ALKSiteBundle:Article');
+
+        // On récupère l'entité correspondant à l'id $id
+        $article = $repository->find($id);
+
+        $form   = $this->createForm(new ArticleType, $article);
+        $formHandler = new ArticleHandler($form, $this->get('request'), $em);
+
+        if($formHandler->process())
+        {
+            return $this->redirect( $this->generateUrl('ALKSiteBundle_voirarticle', array('id' => $id)));
+        }
+
+        return $this->render('ALKSiteBundle:Site:formulaire.html.twig', array('form' => $form->createView()));
+    }
 }

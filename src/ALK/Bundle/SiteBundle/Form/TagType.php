@@ -22,7 +22,7 @@ class TagType extends AbstractType
     public function getDefaultOptions(array $options)
     {
         return array(
-            'data_class' => ' ALK\Bundle\SiteBundle\Entity\Tag', // Ni de modifier la classe ici.
+            'data_class' => 'ALK\Bundle\SiteBundle\Entity\Tag', // Ni de modifier la classe ici.
         );
     }
 }
