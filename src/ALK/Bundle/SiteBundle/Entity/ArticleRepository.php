@@ -34,7 +34,8 @@ class ArticleRepository extends EntityRepository
 
         // On fait une jointure sur la table des tags, avec pour alias « t ».
         $qb ->join('a.tags', 't')
-            ->where($qb->expr()->in('t.name', $nom_tags)); // Puis on filtre sur le nom des tags.
+            ->where($qb->expr()->in('t.name', $nom_tags)) // Puis on filtre sur le nom des tags.
+            ->add('orderBy', 'a.id DESC');
 
         // Enfin, on retourne le résultat.
         return $qb->getQuery()

@@ -23,7 +23,12 @@ ALKSiteBundle_modifierArticle:
 
 
 ALKSiteBundle_voirlesArticles:
-    pattern:  /liste/node/{page}/{tag}
-    defaults: { _controller: ALKSiteBundle:Default:listeArticles, page: 1, tag: "Default" }
+    pattern:  /liste/node/{tag}/{page}
+    defaults: { _controller: ALKSiteBundle:Default:listeArticles, tag: "Default", page: 1 }
     requirements:
         page: \d*
+
+ALKSiteBundle_voirlesArticles2:
+    pattern:  /liste/node/
+    defaults: { _controller: ALKSiteBundle:Default:listeArticles, tag: "Default", page: 1 }
+

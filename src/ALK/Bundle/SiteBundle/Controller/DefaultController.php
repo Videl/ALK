@@ -79,7 +79,7 @@ class DefaultController extends Controller
         return $this->render('ALKSiteBundle:Site:formulaire.html.twig', array('form' => $form->createView()));
     }
 
-    public function listeArticlesAction($page, $tag)
+    public function listeArticlesAction($tag, $page)
     {
         $em = $this->getDoctrine()->getEntityManager();
         $repository = $em->getRepository('ALKSiteBundle:Article');
