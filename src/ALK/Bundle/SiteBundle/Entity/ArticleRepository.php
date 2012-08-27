@@ -42,4 +42,14 @@ class ArticleRepository extends EntityRepository
                    ->getResult();
     }
 
+    public function myFindAllArticles()
+    {
+        $qb = $this->createQueryBuilder('a');
+        $qb->add('orderBy', 'a.id DESC');
+
+
+
+        return $qb->getQuery()->getResult();
+    }
+
 }

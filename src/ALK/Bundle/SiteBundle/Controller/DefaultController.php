@@ -86,7 +86,7 @@ class DefaultController extends Controller
 
         if($tag == "Default")
         {
-            $articles = $repository->findAll();
+            $articles = $repository->myFindAllArticles();
 
         } else
         {
