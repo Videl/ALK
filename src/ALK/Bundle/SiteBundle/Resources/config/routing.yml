@@ -20,3 +20,10 @@ ALKSiteBundle_ajouterarticle:
 ALKSiteBundle_modifierArticle:
     pattern:  /edit/node/{id}
     defaults: { _controller: ALKSiteBundle:Default:modifierArticle }
+
+
+ALKSiteBundle_voirlesArticles:
+    pattern:  /liste/node/{page}/{tag}
+    defaults: { _controller: ALKSiteBundle:Default:listeArticles, page: 1, tag: "Default" }
+    requirements:
+        page: \d*

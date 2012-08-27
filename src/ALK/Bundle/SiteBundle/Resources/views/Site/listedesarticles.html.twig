@@ -1,0 +1,15 @@
+{% extends "ALKSiteBundle::layout.html.twig" %}
+
+{% block title %}Listes des articles{% endblock %}
+
+
+{% block little_body %}
+
+{% for one_article in articles %}
+<h2>{{ one_article.titre }} : {{ one_article.id }} <span class=" pull-right">{{ one_article.date|date('d/m/Y') }}</span> <br /> <small>{% for tag in one_article.tags %} <a href="#" ><i class="icon-tag"></i> {{ tag.name|lower }}</a> {% endfor %}</small> </h2>
+<img src="http://static1.minitokyo.net/view/23/10/593023.jpg" alt="http://static1.minitokyo.net/view/23/10/593023.jpg" class="img-circle" />
+
+<p class="mesarticles" >{{ one_article.contenu }}</p>
+<hr />
+{% endfor %}
+{% endblock %}

@@ -78,4 +78,22 @@ class DefaultController extends Controller
 
         return $this->render('ALKSiteBundle:Site:formulaire.html.twig', array('form' => $form->createView()));
     }
+
+    public function listeArticlesAction($page, $tag)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $repository = $em->getRepository('ALKSiteBundle:Article');
+
+        if($tag == "Default")
+        {
+            $articles = $repository->findAll();
+
+        } else
+        {
+            $articles = $repository->myFindByTags(array($tag));
+        }
+
+        return $this->render('ALKSiteBundle:Site:listedesarticles.html.twig', array('articles' => $articles));
+
+    }
 }
