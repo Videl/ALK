@@ -1,8 +1,11 @@
 {% extends "ALKSiteBundle::layout.html.twig" %}
+{% block stylesheets %}
+<link href="{{ asset('assets/mercury.bundle.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block little_body %}
 
 <form action="" method="post" {{ form_enctype(form) }}>
-
 
 
 <h2>
@@ -26,7 +29,6 @@
 
 <input type="submit" value="submit"/>
 </form>
-
 {% endblock %}
 
 {% block javascript %}
@@ -58,4 +60,5 @@ $(document).ready(function() {
     });
 });
 </script>
+
 {% endblock %}
