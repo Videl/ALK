@@ -13,7 +13,7 @@ class ArticleType extends AbstractType
         $builder
             ->add('date',    'date')
             ->add('titre',   'text')
-            ->add('contenu', 'textarea')
+            ->add('contenu', 'ckeditor')
             ->add('tags',    'collection', array('type'      => new TagType,
                                                  'prototype' => true,
                                                  'allow_add' => true))
