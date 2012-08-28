@@ -5115,3 +5115,7 @@ a.badge:hover {
      -moz-border-radius: 500px;
           border-radius: 500px;
 }
+
+.centrer {
+      text-align: center;
+}
