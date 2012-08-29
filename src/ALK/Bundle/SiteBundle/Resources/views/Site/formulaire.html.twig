@@ -1,5 +1,6 @@
 {% extends "ALKSiteBundle::layout.html.twig" %}
 
+{% block title %} Nouvel Article {% endblock %}
 
 {% block little_body %}
 
@@ -10,20 +11,21 @@
     {{ form_label(form.titre, "Titre de l'article") }}
     {{ form_errors(form.titre) }}
     {{ form_widget(form.titre) }}
-    <small>{{ form_row(form.date) }}
-        <small><a href="#" ><i class="icon-tag"></i>tags : </a> {{ form_row(form.tags) }}
-<a href="#" id="add_tag">Ajouter un tag</a> </small>
+    <small>
+        {{ form_row(form.date) }}
     </small>
 </h2>
+<p>
+    <a href="#" id="add_tag">Ajouter un tag</a>
+    <a href="#" ><i class="icon-tag"></i>tags : </a> {{ form_row(form.tags) }}
+</p>
 {{ form_errors(form) }}
 <p>
-     {{ form_label(form.contenu, "Contenu de l'article") }}
+    {{ form_label(form.contenu, "Contenu de l'article") }}
     {{ form_errors(form.contenu) }}
     {{ form_widget(form.contenu) }}
 </p>
 {{ form_rest(form) }}
-
-<!-- Les erreurs générales du formulaire. -->
 
 <input type="submit" value="Valider l'article"/>
 </form>

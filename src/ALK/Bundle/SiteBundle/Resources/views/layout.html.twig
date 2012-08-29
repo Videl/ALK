@@ -1,4 +1,4 @@
-{% extends "::base.html.twig" %}
+{% extends "::alk_base.html.twig" %}
   {% block master_title %}{% block title %}{% endblock %} | {% endblock %}
 
   {% block entete_navbar %}
@@ -70,7 +70,7 @@
                 <li class="nav-header">Catégories principales</li>
                 <li><a href="#">Photos</a></li>
                 <li><a href="#">Annonce de stage</a></li>
-                <li><a href="#">Articles sur la technique du Kyudo</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': "Technique"}) }}">Technique du Kyudo</a></li>
                 <li><a href="#">Toutes les catégories</a></li>
 
                 <li>
@@ -88,6 +88,7 @@
                 </li>
                 <li class="nav-header">Articles</li>
                 <li><a href="{{ path('ALKSiteBundle_ajouterarticle') }}">Ecrire un article</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirlesArticles') }}">Voir tous les articles</a></li>
               </ul>
             </div>
           </div> <!-- /span4 -->
