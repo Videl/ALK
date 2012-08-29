@@ -11,7 +11,10 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
-            ->add('date',    'date')
+            ->add('date',    'date', array(
+                'widget' => 'single_text',
+                'format' => 'dd/MM/yyyy'
+                ))
             ->add('titre',   'text')
             ->add('contenu', 'ckeditor')
             ->add('tags',    'collection', array('type'      => new TagType,

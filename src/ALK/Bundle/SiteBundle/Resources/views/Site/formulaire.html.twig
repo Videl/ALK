@@ -5,26 +5,25 @@
 {% block little_body %}
 
 <form action="" method="post" {{ form_enctype(form) }}>
+    <span class="pull-right">
+        {{ form_row(form.date) }}
+    </span>
 
-
-<h2>
-    {{ form_label(form.titre, "Titre de l'article") }}
+    {{ form_label(form.contenu, "Contenu de l'article") }}
     {{ form_errors(form.titre) }}
     {{ form_widget(form.titre) }}
-    <small>
-        {{ form_row(form.date) }}
-    </small>
-</h2>
-<p>
-    <a href="#" id="add_tag">Ajouter un tag</a>
-    <a href="#" ><i class="icon-tag"></i>tags : </a> {{ form_row(form.tags) }}
-</p>
+
 {{ form_errors(form) }}
 <p>
     {{ form_label(form.contenu, "Contenu de l'article") }}
     {{ form_errors(form.contenu) }}
     {{ form_widget(form.contenu) }}
 </p>
+
+    <p>
+        <a href="#" id="add_tag">Ajouter un tag</a>
+        <a href="#" ><i class="icon-tag"></i>tags : </a> {{ form_row(form.tags) }}
+    </p>
 {{ form_rest(form) }}
 
 <input type="submit" value="Valider l'article"/>

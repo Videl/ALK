@@ -48,7 +48,7 @@ class DefaultController extends Controller
     {
         $article = new Article;
 
-        $article->setTitre("Nouvel article");
+        $article->setTitre("Titre");
         $article->setContenu("Nouveau contenu");
 
         $form        = $this->createForm(new ArticleType, $article);
