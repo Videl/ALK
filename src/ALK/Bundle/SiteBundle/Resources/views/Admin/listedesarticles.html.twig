@@ -1,0 +1,26 @@
+{% extends "ALKSiteBundle::admin.layout.html.twig" %}
+
+{% block title %}Listes des articles{% endblock %}
+
+
+{% block admin_block %}
+<dl class="dl-horizontal">
+{% for article in articles %}
+    <dt class="text-overflow">
+       <a href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}">#</a> <a href="{{ path('ALKSiteBundle_modifierArticle', {'id': article.id}) }}">M</a> X
+    </dt>
+    <dd>
+        <b>{{ article.titre }}</b> écrit le {{ article.date|date('d/m/Y') }}
+        <span class="pull-right">
+
+        </span>
+    </dd>
+    <dt></dt>
+    <dd>
+                {% for tag in article.tags %}
+                <a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': tag.name}) }}" ><i class="icon-tag"></i> {{ tag.name|lower }}</a>
+            {% endfor %}
+    </dd>
+{% endfor %}
+</dl>
+{% endblock %}
