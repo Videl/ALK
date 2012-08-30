@@ -16,4 +16,16 @@ class AdminController extends Controller
     {
         return $this->render('ALKSiteBundle:Admin:index.html.twig');
     }
+
+    public function listeArticlesAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $repository = $em->getRepository('ALKSiteBundle:Article');
+
+
+        $articles = $repository->myFindAllArticles();
+
+
+        return $this->render('ALKSiteBundle:Admin:listedesarticles.html.twig', array('articles' => $articles));
+    }
 }

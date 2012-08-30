@@ -13,15 +13,6 @@ ALKSiteBundle_voirarticle:
     defaults: { _controller: ALKSiteBundle:Default:voirarticle }
 
 
-ALKSiteBundle_ajouterarticle:
-    pattern:  /add/node/
-    defaults: { _controller: ALKSiteBundle:Default:ajouter }
-
-ALKSiteBundle_modifierArticle:
-    pattern:  /edit/node/{id}
-    defaults: { _controller: ALKSiteBundle:Default:modifierArticle }
-
-
 ALKSiteBundle_voirlesArticles:
     pattern:  /liste/node/{tag}/{page}
     defaults: { _controller: ALKSiteBundle:Default:listeArticles, tag: "Default", page: 1 }

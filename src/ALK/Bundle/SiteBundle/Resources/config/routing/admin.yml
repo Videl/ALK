@@ -2,3 +2,16 @@
 ALK_adminAccueil:
     pattern: /
     defaults: {_controller: ALKSiteBundle:Admin:index }
+
+
+ALKSiteBundle_ajouterarticle:
+    pattern:  /add/node/
+    defaults: { _controller: ALKSiteBundle:Default:ajouter }
+
+ALKSiteBundle_modifierArticle:
+    pattern:  /edit/node/{id}
+    defaults: { _controller: ALKSiteBundle:Default:modifierArticle }
+
+ALK_admin_listeArticles:
+    pattern:  /liste/node/
+    defaults: { _controller: ALKSiteBundle:Admin:listeArticles }
