@@ -15,3 +15,6 @@ ALKSiteBundle_modifierArticle:
 ALK_admin_listeArticles:
     pattern:  /liste/node/
     defaults: { _controller: ALKSiteBundle:Admin:listeArticles }
+
+ALK_admin_logout:
+    pattern: /logout

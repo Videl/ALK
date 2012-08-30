@@ -12,11 +12,26 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     || !in_array(@$_SERVER['REMOTE_ADDR'], array(
         '127.0.0.1',
         '::1',
+        '82.231.26.27',
+        '173.245.49.144',
     ))
 ) {
     header('HTTP/1.0 403 Forbidden');
-    exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
+    exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.' . $_SERVER['REMOTE_ADDR']);
 }*/
+
+if( !isset($_SERVER['PHP_AUTH_USER']) )
+{
+    if (isset($_SERVER['HTTP_AUTHORIZATION']) && (strlen($_SERVER['HTTP_AUTHORIZATION']) > 0))
+    {
+        list($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) = explode(':', base64_decode(substr($_SERVER['HTTP_AUTHORIZATION'], 6)));
+        if( strlen($_SERVER['PHP_AUTH_USER']) == 0 || strlen($_SERVER['PHP_AUTH_PW']) == 0 )
+        {
+            unset($_SERVER['PHP_AUTH_USER']);
+            unset($_SERVER['PHP_AUTH_PW']);
+        }
+    }
+}
 
 require_once __DIR__.'/../app/bootstrap.php.cache';
 require_once __DIR__.'/../app/AppKernel.php';

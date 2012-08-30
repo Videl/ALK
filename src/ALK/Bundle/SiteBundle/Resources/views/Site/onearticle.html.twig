@@ -1,7 +1,7 @@
 <h2>
+    <a href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}" title="Permalink" >#</a>
     {{ article.titre }}
-    <a href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}" rel="Permalink" >#</a>
-    <span class=" pull-right">
+    <span class="pull-right">
         <small>{{ article.date|date('d/m/Y') }}</small>
     </span>
 </h2>

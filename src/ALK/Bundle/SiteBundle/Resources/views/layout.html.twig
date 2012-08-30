@@ -55,6 +55,8 @@
                 <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 3}) }}">Les enseignants</a></li>
                 <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 6}) }}">Lieux de pratique</a></li>
                 <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 5}) }}">Notre filiation</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 8}) }}">Stages d'initiation</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 7}) }}">Comment s'inscrire</a></li>
                 <!--<li class="active"><a href="#">Listes des articles</a></li>-->
 
                 <li class="nav-header">Catégories principales</li>
@@ -64,11 +66,35 @@
                 <!--<li><a href="#">Toutes les catégories</a></li>-->
               </ul>
             </div>
+            {% if is_granted('ROLE_ADMIN') %}
 
-          {% block menu2 %}
-          {% endblock %}
-          {% block menu3 %}
-          {% endblock %}
+            {% block menu2 %}
+                    <div class="inner-well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Articles</li>
+                            <li><a href="{{ path('ALKSiteBundle_ajouterarticle') }}">Ecrire un article</a></li>
+                            <li><a href="{{ path('ALK_admin_listeArticles') }}">Liste des articles</a></li>
+                            <li class="nav-header">Menu</li>
+                            <li>Modifier le menu du haut</li>
+                            <li>Modifier le menu de droite</li>
+                            <li class="nav-header">Autre</li>
+                            <li><a href="{{ path('ALK_admin_logout') }}">Déconnexion</a></li>
+                        </ul>
+
+                    </div>
+            {% endblock %}
+
+            {% block menu3 %}
+                <div class="inner-well sidebar-nav">
+                         <ul class="nav nav-list">
+                            <li class="nav-header">Historique des modifications</li>
+                        </ul>
+                </div>
+            {% endblock %}
+
+            {% endif %}
+
+
           </div> <!-- /span4 -->
           {% endblock %}
         </div><!-- /row-fluid -->

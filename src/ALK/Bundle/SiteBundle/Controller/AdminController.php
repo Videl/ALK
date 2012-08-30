@@ -14,7 +14,8 @@ class AdminController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ALKSiteBundle:Admin:index.html.twig');
+        //return $this->render('ALKSiteBundle:Admin:index.html.twig');
+        return $this->listeArticlesAction();
     }
 
     public function listeArticlesAction()

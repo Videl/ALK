@@ -9,10 +9,20 @@ security:
     providers:
         in_memory:
             users:
-                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+                user:  { password: renshi, roles: [ 'ROLE_USER' ] }
+                "bureau": { password: "anshi", roles: [ 'ROLE_ADMIN' ] }
 
     firewalls:
+        alk_secure:
+            pattern:   ^/
+            anonymous: ~
+            http_basic:
+                realm: "Administration"
+            logout:
+                path: /admin/logout
+                target: /
+
+
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
@@ -33,6 +43,9 @@ security:
             #http_basic:
             #    realm: "Secured Demo Area"
 
+
+
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
         #- { path: ^/_internal, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+        - { path: ^/admin, roles: ROLE_ADMIN }
