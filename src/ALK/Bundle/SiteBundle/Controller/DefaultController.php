@@ -15,7 +15,13 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        return $this->render('ALKSiteBundle:Site:index.html.twig');
+        $repository = $this->getDoctrine()
+                       ->getEntityManager()
+                       ->getRepository('ALKSiteBundle:Article');
+        $article = $repository->find(4);
+
+        return $this->render('ALKSiteBundle:Site:index.html.twig', array('article' =>
+    $article));
         //return $this->render('::base.html.twig', array('name' => $name));
     }
 

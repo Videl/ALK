@@ -14,19 +14,14 @@
           </a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="#about" class="btn">Les enseignants</a></li>
-              <li><a href="#about" class="btn">Lieux</a></li>
-              <li><a href="#about" class="btn disabled">Notre filiation</a></li>
-              <li><a href="#about" class="btn">Contacts</a></li>
-              <li><a href="#about" class="btn disabled">Documents</a></li>
+              <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 3}) }}" class="btn">Les enseignants</a></li>
+              <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 6}) }}" class="btn">Lieux de pratique</a></li>
+              <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 5}) }}" class="btn">Notre filiation</a></li>
+              <!--<li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 5}) }}" class="btn disabled">Notre filiation</a></li>-->
               <li class="dropdown"><a href="#stages" class="dropdown-toggle btn" data-toggle="dropdown">Stages <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Stage A</a></li>
-                    <li><a href="#">Stage B</a></li>
-                    <li><a href="#">Stage C</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Stages d'initiation A</a></li>
-                    <li><a href="#">Stages d'initiation B</a></li>
+                    <li><a href="#">Stage</a></li>
+                    <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 8}) }}">Stages d'initiation A</a></li>
                 </ul>
               </li>
               <li class="search-form-for-the-navbar-perso"><form class="pull-right form-search"><input type="text" class="input-medium search-query pull-right " placeholder="Recherche"/></form></li>

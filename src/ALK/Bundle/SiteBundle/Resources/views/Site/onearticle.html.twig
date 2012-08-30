@@ -1,10 +1,11 @@
-<h2>
-    {{ article.titre }}
+<h3>
+    {{ article.titre }} [
     <a href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}" rel="Permalink" >#</a>
+    <a href="{{ path('ALKSiteBundle_modifierArticle', {'id': article.id}) }}" rel="Modifier"> M</a> ]
     <span class=" pull-right">
         {{ article.date|date('d/m/Y') }}
     </span>
-</h2>
+</h3>
 <p>
     <small>
         {% for tag in article.tags %}
