@@ -32,3 +32,4 @@ ALKSiteBundle_voirlesArticles2:
     pattern:  /liste/node/
     defaults: { _controller: ALKSiteBundle:Default:listeArticles, tag: "Default", page: 1 }
 
+

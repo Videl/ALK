@@ -105,4 +105,5 @@ class DefaultController extends Controller
         return $this->render('ALKSiteBundle:Site:listedesarticles.html.twig', array('articles' => $articles));
 
     }
+
 }

@@ -1,0 +1,4 @@
+
+ALK_adminAccueil:
+    pattern: /
+    defaults: {_controller: ALKSiteBundle:Admin:index }

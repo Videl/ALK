@@ -52,38 +52,17 @@
             <div class="inner-well sidebar-nav">
               <ul class="nav nav-list">
                 <li class="nav-header">Liens</li>
-                <li><a href="#">Kyudo à Montpellier</a></li>
-                <li><a href="#">Les enseignants</a></li>
-                <li><a href="#">Lieux de pratique</a></li>
-                <li><a href="#">Nos activités</a></li>
-                <li><a href="#">Notre filiation</a></li>
-                <li><a href="#">Coordonnées & Liens</a></li>
-                <li><a href="#">Documents et photos</a></li>
-                <li><a href="#">Actualités</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 4}) }}">Kyudo à Montpellier</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 3}) }}">Les enseignants</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 6}) }}">Lieux de pratique</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirarticle', {'id': 5}) }}">Notre filiation</a></li>
                 <!--<li class="active"><a href="#">Listes des articles</a></li>-->
 
                 <li class="nav-header">Catégories principales</li>
-                <li><a href="#">Photos</a></li>
-                <li><a href="#">Annonce de stage</a></li>
-                <li><a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': "Technique"}) }}">Technique du Kyudo</a></li>
-                <li><a href="#">Toutes les catégories</a></li>
-
-                <li>
-                  <div class="btn-group">
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                      <i class="icon-user"></i> Username
-                      <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Profile</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Sign Out</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-header">Articles</li>
-                <li><a href="{{ path('ALKSiteBundle_ajouterarticle') }}">Ecrire un article</a></li>
-                <li><a href="{{ path('ALKSiteBundle_voirlesArticles') }}">Voir tous les articles</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': "photos"}) }}">Photos</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': "stage"}) }}">Annonce de stage</a></li>
+                <li><a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': "technique"}) }}">Technique du Kyudo</a></li>
+                <!--<li><a href="#">Toutes les catégories</a></li>-->
               </ul>
             </div>
           </div> <!-- /span4 -->
@@ -97,5 +76,5 @@
     <span style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); display: inline-block;">
         &copy;
     </span>
-    <!--[if lte IE 8]></span><![endif]--> Above and beyond 2012</p>
+    <!--[if lte IE 8]></span><![endif]--> Above and beyond 2012 <a class="pull-right" href="{{ path('ALK_adminAccueil') }}">Administration</a></p>
     {% endblock %}

@@ -6,6 +6,10 @@ ALKSiteBundle_crud:
     resource: "@ALKSiteBundle/Resources/config/routing/article.yml"
     prefix:   /crud
 
+ALKSiteBundle_admin:
+    resource: "@ALKSiteBundle/Resources/config/routing/admin.yml"
+    prefix:   /admin
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
