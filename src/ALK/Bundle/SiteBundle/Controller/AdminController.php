@@ -27,6 +27,10 @@ class AdminController extends Controller
         $articles = $repository->myFindAllArticles();
 
 
-        return $this->render('ALKSiteBundle:Admin:listedesarticles.html.twig', array('articles' => $articles));
+        return $this->render('ALKSiteBundle:Admin:listedesarticles.html.twig', array(
+        'articles' => $articles,
+        'histories' => $this->get('alk_site.history')->getHistory()
+        ));
     }
+
 }

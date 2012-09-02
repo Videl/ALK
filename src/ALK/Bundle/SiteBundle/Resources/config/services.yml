@@ -10,3 +10,7 @@ services:
         class:        ALK\Bundle\SiteBundle\Form\Type\CkeditorType
         tags:
             - { name: form.type, alias: ckeditor }
+
+    alk_site.history:
+        class: ALK\Bundle\SiteBundle\Service\ALKUseHistory
+        arguments: [@doctrine]
