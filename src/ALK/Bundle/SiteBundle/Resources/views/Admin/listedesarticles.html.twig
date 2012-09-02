@@ -32,7 +32,7 @@
              <ul class="nav nav-list">
                 <li class="nav-header">Historique des modifications</li>
                 {% for history in histories %}
-                <li>{{ history.name }} le {{ history.date|date('d/m/Y') }}</li>
+                <li>{{ history.name }} [{{ history.date|date('H.i:d/m') }}]</li>
                 {% endfor %}
             </ul>
     </div>
