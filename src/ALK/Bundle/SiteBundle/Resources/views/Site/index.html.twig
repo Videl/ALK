@@ -24,9 +24,15 @@
 <div class="container-fluid-extended">
   <div class="row-fluid">
     <div class="span4">
-      <h2>Dernière article</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
+      {% for article in lastarticle() %}
+      <h2>Dernière article le {{ article.date|date('d/m/y') }}</h2>
+      <h3>
+        <a href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}">{{ article.titre }}</a>
+      </h3>
+      <p>
+        <a class="btn" href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}">Lire &raquo;</a>
+      </p>
+      {% endfor %}
     </div>
     <div class="span4">
       <h2>Dernière info FFKT</h2>

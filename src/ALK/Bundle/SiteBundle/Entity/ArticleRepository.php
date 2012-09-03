@@ -54,11 +54,7 @@ class ArticleRepository extends EntityRepository
 
     public function myLastArticle()
     {
-        $qb = $this->createQuery('a')
-            ->orderBy('a.id DESC')
-            ->limit(1);
-
-        return $qb->getQuery()->getResult();
+        return $this->findBy(array(), array('id'=>'DESC'), 1);
     }
 
 }

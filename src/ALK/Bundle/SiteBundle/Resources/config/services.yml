@@ -14,3 +14,9 @@ services:
     alk_site.history:
         class: ALK\Bundle\SiteBundle\Service\ALKUseHistory
         arguments: [@doctrine]
+
+    alk_site.ourarticle:
+        class: ALK\Bundle\SiteBundle\Service\ALKOurArticle
+        arguments: [@doctrine]
+        tags:
+            -  { name: twig.extension }
