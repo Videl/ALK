@@ -48,4 +48,26 @@ class ALKOurArticle extends \Twig_Extension
         return $repository->myLastArticle();
     }
 
+    public function getFilters()
+    {
+        return array(
+            'shortify' => new \Twig_Filter_Method($this, 'lemmeShortify'),
+        );
+    }
+
+    public function lemmeShortify($string, $limit = 30)
+    {
+        $words = explode(' ', strip_tags($string), $limit+1);
+        $short = "";
+
+        for($i=0;$i< $limit; $i++)
+        {
+            $short .= ' ' . $words[$i];
+        }
+        $short .= '...';
+
+        return trim($short);
+    }
+
+
 }
