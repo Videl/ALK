@@ -16,7 +16,7 @@ class ArticleType extends AbstractType
                 'format' => 'dd/MM/yyyy'
                 ))
             ->add('titre',   'text')
-            ->add('contenu', 'ckeditor')
+            ->add('contenu', 'textarea')
             ->add('tags',    'collection', array('type'      => new TagType,
                                                  'prototype' => true,
                                                  'allow_add' => true))

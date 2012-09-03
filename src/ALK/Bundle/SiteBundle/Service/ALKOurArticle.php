@@ -42,9 +42,6 @@ class ALKOurArticle extends \Twig_Extension
     {
         $repository = $this->em->getRepository('ALKSiteBundle:Article');
 
-        //$article = $repository->findBy(array(), array('id'=>'DESC'), 1);
-
-
         return $repository->myLastArticle();
     }
 
@@ -55,7 +52,7 @@ class ALKOurArticle extends \Twig_Extension
         );
     }
 
-    public function lemmeShortify($string, $limit = 30)
+    public function lemmeShortify($string, $limit = 15)
     {
         $words = explode(' ', strip_tags($string), $limit+1);
         $short = "";
