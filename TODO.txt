@@ -1,0 +1,8 @@
+TODO List:
+- Fetch RSS, store it, extract first result, use it.
+- Evenements Entity + Calendar to work with
+- Gallery Entity + options page (public/private)
+- File Entity
+	- If File is image (png, jpg) make the user choose the gallery (entity?)
+		that should be used, or make a new one and choose his public/
+		private state
