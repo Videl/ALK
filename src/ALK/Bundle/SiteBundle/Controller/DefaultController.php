@@ -63,7 +63,7 @@ class DefaultController extends Controller
         if($formHandler->process())
         {
             $history = $this->get('alk_site.history');
-            $history->push("Nouvel article", "url url url");
+            $history->push("Nouvel article", 1);
             return $this->redirect( $this->generateUrl('ALKSiteBundle_voirarticle', array('id' => $article->getId())) );
         }
 
