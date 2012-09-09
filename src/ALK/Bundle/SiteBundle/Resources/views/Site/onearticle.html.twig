@@ -5,12 +5,12 @@
         <small>{{ article.date|date('d/m/Y') }}</small>
     </span>
 </h2>
-<p>
-    <small>
-        {% for tag in article.tags %}
-            <a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': tag.name}) }}" ><i class="icon-tag"></i> {{ tag.name|lower }}</a>
-        {% endfor %}
-    </small>
-</p>
 
-<p class="mesarticles" >{{ article.contenu|raw }}</p>
+<small>
+    {% for tag in article.tags %}
+        <a href="{{ path('ALKSiteBundle_voirlesArticles', {'tag': tag.name}) }}" ><i class="icon-tag"></i> {{ tag.name|lower }}</a>
+    {% endfor %}
+</small>
+
+
+<p class="mesarticles" >{{ article.contenu|raw }}

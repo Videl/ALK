@@ -10,7 +10,7 @@
 		<img src="{{ asset('bootstrap/stiles/header14.jpg') }}" alt="Demo image" id="header14" />
 		<img src="{{ asset('bootstrap/stiles/header8.jpg') }}" alt="Demo image" id="header8" />" />
 		<img src="{{ asset('bootstrap/stiles/header13.jpg') }}" alt="Demo image" id="header13" />
-		<img src="{{ asset('bootstrap/stiles/header15.jpg') }}" alt="Demo image" id="header15 />
+		<img src="{{ asset('bootstrap/stiles/header15.jpg') }}" alt="Demo image" id="header15" />
 		<img src="{{ asset('bootstrap/stiles/header12.jpg') }}" alt="Demo image" id="header12" />
 		<img src="{{ asset('bootstrap/stiles/header11.jpg') }}" alt="Demo image" id="header11" /><!--<![endif]-->
 		<img src="{{ asset('bootstrap/stiles/header7.jpg') }}" alt="Demo image" id="header7" />
@@ -29,12 +29,10 @@
       <h3>
         <a href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}">{{ article.titre }}</a>
       </h3>
-      <p>
-          <blockquote>
-            {{ article.contenu|shortify|raw }}
-          </blockquote>
-          <a class="btn show" href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}">Lire &raquo;</a>
-      </p>
+      <blockquote>
+        {{ article.contenu|shortify|raw }}
+      </blockquote>
+      <a class="btn show" href="{{ path('ALKSiteBundle_voirarticle', {'id': article.id}) }}">Lire &raquo;</a>
       {% endfor %}
 
     </div>
@@ -56,7 +54,7 @@
 <h2>
     {{ article.titre }}
 </h2>
-<p>
-    {{ article.contenu|raw }}
-</p>
+
+{{ article.contenu|raw }}
+
 {% endblock %}
