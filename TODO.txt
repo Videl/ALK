@@ -4,5 +4,5 @@ TODO List:
 - Gallery Entity + options page (public/private)
 - File Entity
 	- If File is image (png, jpg) make the user choose the gallery (entity?)
-		that should be used, or make a new one and choose his public/
+		that should be used, or make a new one and choose its public/
 		private state
