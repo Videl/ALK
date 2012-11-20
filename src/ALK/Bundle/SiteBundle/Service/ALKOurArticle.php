@@ -31,7 +31,8 @@ class ALKOurArticle extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'lastarticle' => new \Twig_Function_Method($this, 'lastArticle')
+            'lastarticle' => new \Twig_Function_Method($this, 'lastArticle'),
+            'fakearticle' => new \Twig_Function_Method($this, 'fakeArticle')
         );
 
         // 'antispam_check' est le nom de la fonction qui sera disponible sous Twig
@@ -43,6 +44,11 @@ class ALKOurArticle extends \Twig_Extension
         $repository = $this->em->getRepository('ALKSiteBundle:Article');
 
         return $repository->myLastArticle();
+    }
+
+    public function fakeArticle($text)
+    {
+        return $text;
     }
 
     public function getFilters()
