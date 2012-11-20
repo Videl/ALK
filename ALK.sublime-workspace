@@ -1,0 +1,230 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"m",
+				"m_g"
+			],
+			[
+				"get",
+				"getName"
+			],
+			[
+				"m_",
+				"m_d"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/javacExec.sublime-build",
+	"command_palette":
+	{
+		"height": 138.0,
+		"selected_items":
+		[
+			[
+				"PackIn	",
+				"Package Control: Install Package"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"packa in	",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/videl/code/javaWorkspace/Calcul/Expr.java",
+		"/home/videl/code/javaWorkspace/Calcul/Constante.java",
+		"/home/videl/.config/sublime-text-2/Packages/Alignment/Alignment.py",
+		"/home/videl/code/javaWorkspace/Test/src/Test.java",
+		"/home/videl/code/javaWorkspace/Test/src/Main.java",
+		"/home/videl/.config/sublime-text-2/Packages/User/javacExec.sublime-build",
+		"/home/videl/code/xml/test.xml"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Constance",
+			");",
+			"p",
+			"sa",
+			"dz",
+			"zdz",
+			"dz"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"tes",
+				"Test.java"
+			],
+			[
+				"contex",
+				"Contexte.java"
+			],
+			[
+				"te",
+				"Test.java"
+			],
+			[
+				"context",
+				"Contexte.java"
+			],
+			[
+				"conte",
+				"Contexte.java"
+			],
+			[
+				"bi",
+				"Binaire.java"
+			],
+			[
+				"var",
+				"Variable.java"
+			],
+			[
+				"bin",
+				"Binaire.java"
+			],
+			[
+				"pls",
+				"Plus.java"
+			],
+			[
+				"cons",
+				"Constante.java"
+			],
+			[
+				"b",
+				"Binaire.java"
+			],
+			[
+				"co",
+				"Constante.java"
+			],
+			[
+				"va",
+				"Variable.java"
+			],
+			[
+				"con",
+				"Constante.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

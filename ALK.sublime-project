@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/videl/code/ALK",
+			"folder_exclude_patterns": ["bin", "vendor", "app/logs", "src/Acme"]
+		}
+	]
+}
